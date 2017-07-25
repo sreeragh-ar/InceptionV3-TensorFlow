@@ -2,6 +2,8 @@
 docker run -it   --publish 6006:6006   --volume ${HOME}/tf_files:/tf_files   --workdir /tf_files   gcr.io/tensorflow/tensorflow:latest-devel bash
 
 #retrain inception with your own classes (now you are inside the docker)
+Here 'cars' is the folder which contains image folders(classes) like beetle,audiq7,scorpio etc
+
 python retrain.py \
   --bottleneck_dir=bottlenecks \
   --how_many_training_steps=500 \
